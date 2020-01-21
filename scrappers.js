@@ -27,3 +27,22 @@ const scrapeProduct = async (url)=>{
 }
 
 scrapeProduct(path);
+
+
+    const prepareDom = ()=>{
+
+        const container = document.createElement('div');
+        const imgPara = document.createElement('p');
+        imgPara.textContent = imgUrl;
+        const titlePara = document.createElement('p');
+        titlePara.textContent = Title;
+        const pricePara = document.createElement('p');
+        pricePara.textContent = Price;
+
+        container.append([imgPara,titlePara,pricePara]);
+        document.parentElement.append(container);
+
+    }
+
+    document.addEventListener('load',prepareDom);
+        
