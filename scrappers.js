@@ -15,7 +15,7 @@ const scrapeProduct = async (url)=>{
     const txt = await el2.getProperty('textContent');
     const Title = await txt.jsonValue();
 
-    const [ el3 ] = await page.$x('//*[@id="search"]/div[1]/div[2]/div/span[4]/div[1]/div[1]/div/span/div/div/div[2]/div[2]/div/div[2]/div[1]/div/div[1]/div[2]/div/a/span[1]')
+    const [ el3 ] = await page.$x('//*[@id="search"]/div[1]/div[2]/div/span[4]/div[1]/div[1]/div/span/div/div/div[2]/div[2]/div/div[2]/div[1]/div/div[1]/div[2]/div/a/span[1]/span[1]')
     const txtPrice = await el3.getProperty('textContent');
     const Price = await txtPrice.jsonValue();
 
